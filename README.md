@@ -1,5 +1,9 @@
 # LLM-for-IR-Rec
 
+> Note:
+>
+> - This project is based on [Awesome Information Retrieval in the Age of Large Language Model](https://github.com/IR-LLM/Awesome-Information-Retrieval-in-the-Age-of-Large-Language-Model#generating-synthetic-documents) and [LLM4IR-Survey](https://github.com/RUC-NLPIR/LLM4IR-Survey)
+
 - [LLM-for-IR-Rec](#llm-for-ir-rec)
   - [LLM with IR](#llm-with-ir)
     - [LLM for IR](#llm-for-ir)
@@ -8,12 +12,19 @@
       - [For inference of LLM](#for-inference-of-llm)
       - [Joint Optimization of IR and LLM](#joint-optimization-of-ir-and-llm)
     - [IR for LLM](#ir-for-llm)
-      - [Generating Synthetic Queries](#generating-synthetic-queries)
-      - [Generating Synthetic Documents](#generating-synthetic-documents)
-      - [Generating Ranking Lists](#generating-ranking-lists)
-      - [Query Understanding](#query-understanding)
-      - [Query Extension](#query-extension)
-      - [Generate rather than Retrieve](#generate-rather-than-retrieve)
+      - [Retriever](#retriever)
+        - [Generating Synthetic Queries](#generating-synthetic-queries)
+        - [Generating Synthetic Documents](#generating-synthetic-documents)
+        - [Employing LLMs to Enhance Model Architecture](#employing-llms-to-enhance-model-architecture)
+      - [Re-ranker](#re-ranker)
+        - [Generating Synthetic Queries](#generating-synthetic-queries-1)
+        - [Generating Synthetic Documents](#generating-synthetic-documents-1)
+        - [Fine-tuning LLMs for Reranking](#fine-tuning-llms-for-reranking)
+        - [Prompting LLMs for Reranking](#prompting-llms-for-reranking)
+      - [Query Rewriter](#query-rewriter)
+        - [Query Understanding](#query-understanding)
+        - [Query Extension](#query-extension)
+    - [Analysis paper](#analysis-paper)
     - [Survey](#survey)
     - [Benchmark and Evaluation](#benchmark-and-evaluation)
   - [LLM with Rec](#llm-with-rec)
@@ -21,6 +32,8 @@
     - [Rec enhanced by LLMs](#rec-enhanced-by-llms)
     - [Survey](#survey-1)
     - [other](#other)
+
+
 
 
 ## LLM with IR
@@ -42,13 +55,15 @@
 - [FiD: Leveraging passage retrieval with generative models for open domain question answering.](https://arxiv.org/pdf/2007.01282) *Gautier Izacard, Edouard Grave* EACL 2021.
 - [Distilling Knowledge from Reader to Retriever for Question Answering.](https://openreview.net/forum?id=NTEz-6wysdb) Gautier Izacard et.al. ICLR 2021 (**FiD-KD**)
 - [Copy Is All You Need.](https://arxiv.org/abs/2307.06962) *Tian Lan et.al.* ICLR 2023. (**COG**)
+- [Active Retrieval Augmented Generation.](https://arxiv.org/abs/2305.06983)  Zhengbao Jiang et.al. Arxiv 2023. (**FLARE**)
+- [Generate rather than retrieve: Large language models are strong context generators.](https://arxiv.org/pdf/2209.10063) *Wenhao Yu et.al.* ICLR 2023. (**Retrieve-then-Read->Generate-then-Read pipeline**)
 
 
 
 #### For inference of LLM
 
-- [Generalization through memorization: Nearest neighbor language models.](https://arxiv.org/pdf/1911.00172.pdf) *Urvashi Khandelwal et.al.* Arxiv 2019.
-- [Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions.](https://arxiv.org/pdf/2212.10509) *Harsh Trivedi et.al.* Arxiv 2022.
+- [Generalization through memorization: Nearest neighbor language models.](https://arxiv.org/pdf/1911.00172.pdf) *Urvashi Khandelwal et.al.* ﻿ICLR 2020. (**kNN-LM**)
+- [Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions.](https://aclanthology.org/2023.acl-long.557.pdf) *Harsh Trivedi et.al.* ACL 2023. (**IRCoT QA**)
 - [Rethinking with retrieval: Faithful large language model inference.](https://arxiv.org/pdf/2301.00303) *Hangfeng He et.al.* Arxiv 2023.
 - [Investigating the Factual Knowledge Boundary of Large Language Models with Retrieval Augmentation](https://arxiv.org/abs/2307.11019) *Ruiyang Ren et.al.* Arxiv 2023.
 
@@ -64,34 +79,83 @@
 
 ### IR for LLM
 
-#### Generating Synthetic Queries
+
+
+#### Retriever
+
+##### Generating Synthetic Queries
 
 - [InPars: Data augmentation for information retrieval using large language models.](https://arxiv.org/pdf/2202.05144) *Luiz Bonifacio et.al.* SIGIR 2022. (**InPars**)
 - [UPR: Improving passage retrieval with zero-shot question generation.](https://arxiv.org/pdf/2204.07496) *Devendra Singh Sachan et.al.* EMNLP 2022. (**UPR**)
 - [Promptagator: Fewshot dense retrieval from 8 examples.](https://arxiv.org/pdf/2209.11755) *Zhuyun Dai et.al.* ICLR 2023. (**Promptagator**)
 
-#### Generating Synthetic Documents
+
+
+##### Generating Synthetic Documents
 
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels.](https://arxiv.org/pdf/2212.10496) *Luyu Gao et.al.* Arxiv 2022. (**HyDE**)
-- [Generating Synthetic Documents for Cross-Encoder Re-Rankers: A Comparative Study of ChatGPT and Human Experts.](https://arxiv.org/pdf/2305.02320) *Arian Askari et.al.* Arxiv 2023.
 
-#### Generating Ranking Lists
+  
+
+##### Employing LLMs to Enhance Model Architecture
+
+
+
+
+
+#### Re-ranker
+
+##### Generating Synthetic Queries
+
+
+
+##### Generating Synthetic Documents
+
+- [Generating Synthetic Documents for Cross-Encoder Re-Rankers: A Comparative Study of ChatGPT and Human Experts.](https://arxiv.org/pdf/2305.02320) *Arian Askari et.al.* Arxiv 2023. (**ChatGPT-RetrievalQA dataset**)
+
+  
+
+##### Fine-tuning LLMs for Reranking
+
+- [Document Ranking with a Pretrained Sequence-to-Sequence Model](https://aclanthology.org/2020.findings-emnlp.63.pdf), *Nogueira et al.*, EMNLP 2020 (Findings). 
+- [Text-to-Text Multi-view Learning for Passage Re-ranking](https://dl.acm.org/doi/pdf/10.1145/3404835.3463048), *Ju et al.*, SIGIR 2021 (Short Paper). 
+- [The Expando-Mono-Duo Design Pattern for Text Ranking with Pretrained Sequence-to-Sequence Models](https://arxiv.org/pdf/2101.05667.pdf), *Pradeep et al.*, arXiv 2021. 
+- [RankT5: Fine-Tuning T5 for Text Ranking with Ranking Losses](https://dl.acm.org/doi/pdf/10.1145/3539618.3592047), *Zhuang et al.*, SIGIR 2023 (Short Paper). 
+
+
+
+##### Prompting LLMs for Reranking
+
+- [Improving Passage Retrieval with Zero-Shot Question Generation](https://aclanthology.org/2022.emnlp-main.249.pdf), *Sachan et al.*, EMNLP 2022. 
+
+- [Discrete Prompt Optimization via Constrained Generation for Zero-shot Re-ranker](https://aclanthology.org/2023.findings-acl.61.pdf), *Cho et al.*, ACL 2023 (Findings).
 
 - [Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent.](https://arxiv.org/pdf/2304.09542) *Weiwei Sun et.al.* Arxiv 2023.
+
 - [Zero-Shot Listwise Document Reranking with a Large Language Model.](https://arxiv.org/pdf/2305.02156) *Xueguang Ma et.al.* Arxiv 2023.
 
-#### Query Understanding
+- [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting](https://arxiv.org/pdf/2306.17563.pdf), *Qin et al.*, arXiv 2023. 
+
+  
+
+#### Query Rewriter
+
+##### Query Understanding
 
 - [Query Understanding in the Age of Large Language Models.](https://arxiv.org/pdf/2306.16004) *Avishek Anand et.al.* Gen-IR 2023.
 
-#### Query Extension
+##### Query Extension
 
 - [Generative relevance feedback with large language models.](https://arxiv.org/pdf/2304.13157) *Iain Mackie et.al.* Arxiv 2023.
 - [Query2doc: Query expansion with large language models.](https://arxiv.org/pdf/2303.07678) *Liang Wang et.al.* Arxiv 2023.
 
-#### Generate rather than Retrieve
 
-- [Generate rather than retrieve: Large language models are strong context generators.](https://arxiv.org/pdf/2209.10063) *Wenhao Yu et.al.* ICLR 2023.
+
+### Analysis paper
+
+- [LLMs may Dominate Information Access: Neural Retrievers are Biased Towards LLM-Generated Texts.](https://arxiv.org/abs/2310.20501) Sunhao Dai et.al. Arxiv 2023.
+
+  
 
 ### Survey
 
@@ -151,6 +215,8 @@
 - [A Survey on Multi-Behavior Sequential Recommendation.](https://arxiv.org/abs/2308.15701) Xiaoqing Chen et.al. arXiv 2023.
 
 - [Robust Recommender System: A Survey and Future Directions.](https://arxiv.org/pdf/2309.02057.pdf) Kaike Zhang et.al. arXiv 2023.
+
+- [ Is ChatGPT a Good Recommender? A Preliminary Study.](https://arxiv.org/abs/2304.10149) Junling Liu et.al. CIKM 2023 GenRec Workshop.
 
   
 

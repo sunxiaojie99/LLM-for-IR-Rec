@@ -1,6 +1,27 @@
 # LLM-for-IR-Rec
 
-[toc]
+- [LLM-for-IR-Rec](#llm-for-ir-rec)
+  - [LLM with IR](#llm-with-ir)
+    - [LLM for IR](#llm-for-ir)
+      - [For Pre-training LLM](#for-pre-training-llm)
+      - [For Fine-tuning LLM](#for-fine-tuning-llm)
+      - [For inference of LLM](#for-inference-of-llm)
+      - [Joint Optimization of IR and LLM](#joint-optimization-of-ir-and-llm)
+    - [IR for LLM](#ir-for-llm)
+      - [Generating Synthetic Queries](#generating-synthetic-queries)
+      - [Generating Synthetic Documents](#generating-synthetic-documents)
+      - [Generating Ranking Lists](#generating-ranking-lists)
+      - [Query Understanding](#query-understanding)
+      - [Query Extension](#query-extension)
+      - [Generate rather than Retrieve](#generate-rather-than-retrieve)
+    - [Survey](#survey)
+    - [Benchmark and Evaluation](#benchmark-and-evaluation)
+  - [LLM with Rec](#llm-with-rec)
+    - [Rec based on LLMs](#rec-based-on-llms)
+    - [Rec enhanced by LLMs](#rec-enhanced-by-llms)
+    - [Survey](#survey-1)
+    - [other](#other)
+
 
 ## LLM with IR
 

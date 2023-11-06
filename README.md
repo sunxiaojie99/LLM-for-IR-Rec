@@ -66,13 +66,13 @@
 
 #### Generating Synthetic Queries
 
-- [InPars: Data augmentation for information retrieval using large language models.](https://arxiv.org/pdf/2202.05144) *Luiz Bonifacio et.al.* SIGIR 2022.
-- [UPR: Improving passage retrieval with zero-shot question generation.](https://arxiv.org/pdf/2204.07496) *Devendra Singh Sachan et.al.* EMNLP 2022.
-- [Promptagator: Fewshot dense retrieval from 8 examples.](https://arxiv.org/pdf/2209.11755) *Zhuyun Dai et.al.* ICLR 2023.
+- [InPars: Data augmentation for information retrieval using large language models.](https://arxiv.org/pdf/2202.05144) *Luiz Bonifacio et.al.* SIGIR 2022. (**InPars**)
+- [UPR: Improving passage retrieval with zero-shot question generation.](https://arxiv.org/pdf/2204.07496) *Devendra Singh Sachan et.al.* EMNLP 2022. (**UPR**)
+- [Promptagator: Fewshot dense retrieval from 8 examples.](https://arxiv.org/pdf/2209.11755) *Zhuyun Dai et.al.* ICLR 2023. (**Promptagator**)
 
 #### Generating Synthetic Documents
 
-- [Precise Zero-Shot Dense Retrieval without Relevance Labels.](https://arxiv.org/pdf/2212.10496) *Luyu Gao et.al.* Arxiv 2022.
+- [Precise Zero-Shot Dense Retrieval without Relevance Labels.](https://arxiv.org/pdf/2212.10496) *Luyu Gao et.al.* Arxiv 2022. (**HyDE**)
 - [Generating Synthetic Documents for Cross-Encoder Re-Rankers: A Comparative Study of ChatGPT and Human Experts.](https://arxiv.org/pdf/2305.02320) *Arian Askari et.al.* Arxiv 2023.
 
 #### Generating Ranking Lists

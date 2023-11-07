@@ -3,6 +3,9 @@
 > Note:
 >
 > - This project is based on [Awesome Information Retrieval in the Age of Large Language Model](https://github.com/IR-LLM/Awesome-Information-Retrieval-in-the-Age-of-Large-Language-Model#generating-synthetic-documents) and [LLM4IR-Survey](https://github.com/RUC-NLPIR/LLM4IR-Survey).
+> - Any feedback and contribution are welcome, please open an issue or contact me.
+>
+
 
 
 

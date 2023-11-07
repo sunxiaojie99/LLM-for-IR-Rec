@@ -2,7 +2,9 @@
 
 > Note:
 >
-> - This project is based on [Awesome Information Retrieval in the Age of Large Language Model](https://github.com/IR-LLM/Awesome-Information-Retrieval-in-the-Age-of-Large-Language-Model#generating-synthetic-documents) and [LLM4IR-Survey](https://github.com/RUC-NLPIR/LLM4IR-Survey)
+> - This project is based on [Awesome Information Retrieval in the Age of Large Language Model](https://github.com/IR-LLM/Awesome-Information-Retrieval-in-the-Age-of-Large-Language-Model#generating-synthetic-documents) and [LLM4IR-Survey](https://github.com/RUC-NLPIR/LLM4IR-Survey).
+
+
 
 - [LLM-for-IR-Rec](#llm-for-ir-rec)
   - [LLM with IR](#llm-with-ir)
@@ -86,7 +88,7 @@
 ##### Generating Synthetic Queries
 
 - [InPars: Data augmentation for information retrieval using large language models.](https://arxiv.org/pdf/2202.05144) *Luiz Bonifacio et.al.* SIGIR 2022. (**InPars**)
-- [UPR: Improving passage retrieval with zero-shot question generation.](https://arxiv.org/pdf/2204.07496) *Devendra Singh Sachan et.al.* EMNLP 2022. (**UPR**)
+- [UPR: Improving passage retrieval with zero-shot question generation.](https://arxiv.org/pdf/2204.07496) *Devendra Singh Sachan et.al.* EMNLP 2022. (**UPR, point-wise, query generation**)
 - [Promptagator: Fewshot dense retrieval from 8 examples.](https://arxiv.org/pdf/2209.11755) *Zhuyun Dai et.al.* ICLR 2023. (**Promptagator**)
 
 
@@ -130,11 +132,11 @@
 
 - [Discrete Prompt Optimization via Constrained Generation for Zero-shot Re-ranker](https://aclanthology.org/2023.findings-acl.61.pdf), *Cho et al.*, ACL 2023 (Findings).
 
-- [Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent.](https://arxiv.org/pdf/2304.09542) *Weiwei Sun et.al.* Arxiv 2023.
+- [Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent.](https://arxiv.org/pdf/2304.09542) *Weiwei Sun et.al.* Arxiv 2023. (**RankGPT, list-wise, sliding window**)
 
-- [Zero-Shot Listwise Document Reranking with a Large Language Model.](https://arxiv.org/pdf/2305.02156) *Xueguang Ma et.al.* Arxiv 2023.
+- [Zero-Shot Listwise Document Reranking with a Large Language Model.](https://arxiv.org/pdf/2305.02156) *Xueguang Ma et.al.* Arxiv 2023. (**LRL, list-wise, sliding window**)
 
-- [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting](https://arxiv.org/pdf/2306.17563.pdf), *Qin et al.*, arXiv 2023. 
+- [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting](https://arxiv.org/pdf/2306.17563.pdf), *Qin et al.*, arXiv 2023. (**zero-shot, pairwise ranking prompting**)
 
   
 

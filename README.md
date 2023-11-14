@@ -29,6 +29,7 @@
       - [Query Rewriter](#query-rewriter)
         - [Query Understanding](#query-understanding)
         - [Query Extension](#query-extension)
+        - [Query Rewriting](#query-rewriting)
     - [Analysis paper](#analysis-paper)
     - [Survey](#survey)
     - [Benchmark and Evaluation](#benchmark-and-evaluation)
@@ -61,7 +62,6 @@
 - [Distilling Knowledge from Reader to Retriever for Question Answering.](https://openreview.net/forum?id=NTEz-6wysdb) Gautier Izacard et.al. ICLR 2021 (**FiD-KD**)
 - [Copy Is All You Need.](https://arxiv.org/abs/2307.06962) *Tian Lan et.al.* ICLR 2023. (**COG**)
 - [Active Retrieval Augmented Generation.](https://arxiv.org/abs/2305.06983)  Zhengbao Jiang et.al. Arxiv 2023. (**FLARE**)
-- [Generate rather than retrieve: Large language models are strong context generators.](https://arxiv.org/pdf/2209.10063) *Wenhao Yu et.al.* ICLR 2023. (**Retrieve-then-Read->Generate-then-Read pipeline**)
 
 
 
@@ -104,7 +104,17 @@
 
 ##### Employing LLMs to Enhance Model Architecture
 
+- [Text and Code Embeddings by Contrastive Pre-Training](https://cdn.openai.com/papers/Text_and_Code_Embeddings_by_Contrastive_Pre_Training.pdf), *Neelakantan et al.*, arXiv 2022.
+- [Large Dual Encoders Are Generalizable Retrievers](https://aclanthology.org/2022.emnlp-main.669.pdf), *Ni et al.*, ACL 2022. 
+- [Task-aware Retrieval with Instructions](https://aclanthology.org/2023.findings-acl.225.pdf), *Asai et al.*, ACL 2023 (Findings).
+- [Transformer memory as a differentiable search index](https://proceedings.neurips.cc/paper_files/paper/2022/file/892840a6123b5ec99ebaab8be1530fba-Paper-Conference.pdf), *Tay et al.*, NeurIPS 2022.
 
+
+
+##### Generate rather than Retrieve
+
+- [Generate rather than retrieve: Large language models are strong context generators.](https://arxiv.org/pdf/2209.10063) *Wenhao Yu et.al.* ICLR 2023. (**Retrieve-then-Read->Generate-then-Read pipeline**)
+- [Large Language Models are Built-in Autoregressive Search Engines](https://aclanthology.org/2023.findings-acl.167.pdf), *Ziems et al.*, ACL 2023 (Findings). (**LLM-URL, Given query, llm directly generate Web URLs, open domain QA**)
 
 
 
@@ -139,7 +149,9 @@
 
 - [Zero-Shot Listwise Document Reranking with a Large Language Model.](https://arxiv.org/pdf/2305.02156) *Xueguang Ma et.al.* Arxiv 2023. (**LRL, list-wise, sliding window**)
 
-- [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting](https://arxiv.org/pdf/2306.17563.pdf), *Qin et al.*, arXiv 2023. (**zero-shot, pairwise ranking prompting**)
+- [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting.](https://arxiv.org/pdf/2306.17563.pdf) *Qin et al.* arXiv 2023. (**pairwise**)
+  
+- [Beyond Yes and No: Improving Zero-Shot LLM Rankers via Scoring Fine-Grained Relevance Labels.](https://arxiv.org/pdf/2310.14122.pdf) Honglei Zhuang et.al. arXiv 2023. 
 
   
 
@@ -153,6 +165,11 @@
 
 - [Generative relevance feedback with large language models.](https://arxiv.org/pdf/2304.13157) *Iain Mackie et.al.* Arxiv 2023.
 - [Query2doc: Query expansion with large language models.](https://arxiv.org/pdf/2303.07678) *Liang Wang et.al.* Arxiv 2023.
+
+##### Query Rewriting
+
+- [Large Language Model based Long-tail Query Rewriting in Taobao Search.](https://arxiv.org/pdf/2311.03758.pdf) *Wenjun Peng et.al.* Arxiv 2023.
+
 
 
 
@@ -196,6 +213,8 @@
 - [Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System.](https://arxiv.org/abs/2303.14524) Yunfan Gao et.al. arXiv 2023.
 
 - [*TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation.*](https://dl.acm.org/doi/fullHtml/10.1145/3604915.3608857) *Keqin Bao et.al.* *RecSys 2023.*
+  
+- [LlamaRec: Two-Stage Recommendation using Large Language Models for Ranking.](https://arxiv.org/pdf/2311.02089.pdf) Zhenrui Yue et.al. arXiv 2023.(**LLM ranker**, map the item to the corresponding index letter)
 
   
 

@@ -21,6 +21,8 @@
         - [Generating Synthetic Queries](#generating-synthetic-queries)
         - [Generating Synthetic Documents](#generating-synthetic-documents)
         - [Employing LLMs to Enhance Model Architecture](#employing-llms-to-enhance-model-architecture)
+        - [Using LLM as Embedder](#using-llm-as-embedder)
+        - [Generate rather than Retrieve](#generate-rather-than-retrieve)
       - [Re-ranker](#re-ranker)
         - [Generating Synthetic Queries](#generating-synthetic-queries-1)
         - [Generating Synthetic Documents](#generating-synthetic-documents-1)
@@ -71,7 +73,7 @@
 - [Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions.](https://aclanthology.org/2023.acl-long.557.pdf) *Harsh Trivedi et.al.* ACL 2023. (**IRCoT QA**)
 - [Rethinking with retrieval: Faithful large language model inference.](https://arxiv.org/pdf/2301.00303) *Hangfeng He et.al.* Arxiv 2023.
 - [Investigating the Factual Knowledge Boundary of Large Language Models with Retrieval Augmentation](https://arxiv.org/abs/2307.11019) *Ruiyang Ren et.al.* Arxiv 2023.
-
+- [Retrieve Anything To Augment Large Language Models.](https://arxiv.org/abs/2310.07554) Peitian Zhang et.al. Arxiv 2023. (**LLM-Embedder**, supports the diverse retrieval augmentation needs of LLMs with one unified embedding model)
 
 
 #### Joint Optimization of IR and LLM
@@ -107,7 +109,12 @@
 - [Text and Code Embeddings by Contrastive Pre-Training](https://cdn.openai.com/papers/Text_and_Code_Embeddings_by_Contrastive_Pre_Training.pdf), *Neelakantan et al.*, arXiv 2022.
 - [Large Dual Encoders Are Generalizable Retrievers](https://aclanthology.org/2022.emnlp-main.669.pdf), *Ni et al.*, ACL 2022. 
 - [Task-aware Retrieval with Instructions](https://aclanthology.org/2023.findings-acl.225.pdf), *Asai et al.*, ACL 2023 (Findings).
-- [Transformer memory as a differentiable search index](https://proceedings.neurips.cc/paper_files/paper/2022/file/892840a6123b5ec99ebaab8be1530fba-Paper-Conference.pdf), *Tay et al.*, NeurIPS 2022.
+- [Transformer memory as a differentiable search index.](https://proceedings.neurips.cc/paper_files/paper/2022/file/892840a6123b5ec99ebaab8be1530fba-Paper-Conference.pdf) *Tay et al.*, NeurIPS 2022.
+
+
+##### Using LLM as Embedder
+- [Vector Search with OpenAI Embeddings: Lucene Is All You Need.](https://arxiv.org/abs/2308.14963) Jimmy Lin et al. arXiv 2023. (**OpenAI’s ada2 embedding+HNSW(Lucene search library), rather than Faiss library**)
+- [Language Models are Universal Embedders.](https://arxiv.org/abs/2310.08232) Xin Zhang et.al. arXiv 2023. (**across tasks, natural and programming languages**)
 
 
 
@@ -135,7 +142,7 @@
 - [Document Ranking with a Pretrained Sequence-to-Sequence Model](https://aclanthology.org/2020.findings-emnlp.63.pdf), *Nogueira et al.*, EMNLP 2020 (Findings). 
 - [Text-to-Text Multi-view Learning for Passage Re-ranking](https://dl.acm.org/doi/pdf/10.1145/3404835.3463048), *Ju et al.*, SIGIR 2021 (Short Paper). 
 - [The Expando-Mono-Duo Design Pattern for Text Ranking with Pretrained Sequence-to-Sequence Models](https://arxiv.org/pdf/2101.05667.pdf), *Pradeep et al.*, arXiv 2021. 
-- [RankT5: Fine-Tuning T5 for Text Ranking with Ranking Losses](https://dl.acm.org/doi/pdf/10.1145/3539618.3592047), *Zhuang et al.*, SIGIR 2023 (Short Paper). 
+- [RankT5: Fine-Tuning T5 for Text Ranking with Ranking Losses](https://dl.acm.org/doi/pdf/10.1145/3539618.3592047), *Zhuang et al.*, SIGIR 2023 (**fine-tune T5 with ranking losses**). 
 
 
 
@@ -152,7 +159,6 @@
 - [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting.](https://arxiv.org/pdf/2306.17563.pdf) *Qin et al.* arXiv 2023. (**pairwise**)
   
 - [Beyond Yes and No: Improving Zero-Shot LLM Rankers via Scoring Fine-Grained Relevance Labels.](https://arxiv.org/pdf/2310.14122.pdf) Honglei Zhuang et.al. arXiv 2023. 
-
   
 
 #### Query Rewriter
@@ -165,6 +171,7 @@
 
 - [Generative relevance feedback with large language models.](https://arxiv.org/pdf/2304.13157) *Iain Mackie et.al.* Arxiv 2023.
 - [Query2doc: Query expansion with large language models.](https://arxiv.org/pdf/2303.07678) *Liang Wang et.al.* Arxiv 2023.
+- [Generate, Filter, and Fuse: Query Expansion via Multi-Step Keyword Generation for Zero-Shot Neural Rankers.](https://arxiv.org/pdf/2311.09175.pdf) Minghan Li et.al. arXiv 2023. (**GFF, a query expansion pipeline to imporve zero-shot ranker**)
 
 ##### Query Rewriting
 

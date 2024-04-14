@@ -118,7 +118,7 @@
 - [Language Models are Universal Embedders.](https://arxiv.org/abs/2310.08232) Xin Zhang et.al. arXiv 2023. (**Udever,across tasks, natural and programming languages**)
 - [Fine-Tuning LLaMA for Multi-Stage Text Retrieval.](https://arxiv.org/pdf/2310.08319.pdf) Xueguang Ma et.al. arXiv 2023. (**RepLLaMA, RankLLaMA**, fine-tune LLaMA-2 with bi-encoder architecture)
 - [Making Large Language Models A Better Foundation For Dense Retrieval](https://arxiv.org/abs/2312.15503) Chaofan Li et.al. arXiv 2023. (**pre-train llama + RepLLaMA**)
-- [Improving Text Embeddings with Large Language Models](https://arxiv.org/pdf/2401.00368.pdf). Liang Wang et.al. arXiv 2024. (**E5mistral-7b**, use gpt-4 to build multi-task multi-language synthetic data ($<q, d^+, d^->$) to fine-tune  Mistral-7b)
+- [Improving Text Embeddings with Large Language Models](https://arxiv.org/pdf/2401.00368.pdf). Liang Wang et.al. arXiv 2024. (**E5mistral-7b**, use gpt-4 to build multi-task multi-language synthetic data (<q,d+,d->) to fine-tune  Mistral-7b)
 - [Sgpt: Gpt sentence embeddings for semantic search](https://arxiv.org/abs/2202.08904). Muennighoff. arXiv 2022. (**SGPT**)
 - [Scaling Sentence Embeddings with Large Language Models](https://arxiv.org/pdf/2307.16645.pdf) Jiang et.al. arXiv 2023. (**PromptEOL**,  instruct the model to summarize the input in a single word and then take the last token embedding + In-context Learning Example(**zero-shot**) / QLora with Contrastive Learning Objective(**Fine-tuning**))
 - [One Embedder, Any Task: Instruction-Finetuned Text Embeddings](https://arxiv.org/pdf/2212.09741.pdf) Su et.al. arXiv 2023. (**INSTRUCTOR**)

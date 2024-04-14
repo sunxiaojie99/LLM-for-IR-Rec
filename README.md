@@ -113,8 +113,17 @@
 
 
 ##### Using LLM as Embedder
+- [Large dual encoders are generalizable retrievers](https://aclanthology.org/2022.emnlp-main.669.pdf). Jianmo Ni et.al. emnlp 2022. google(**GTR, Generalizable T5-based dense Retrievers**)
 - [Vector Search with OpenAI Embeddings: Lucene Is All You Need.](https://arxiv.org/abs/2308.14963) Jimmy Lin et al. arXiv 2023. (**OpenAI’s ada2 embedding+HNSW(Lucene search library), rather than Faiss library**)
-- [Language Models are Universal Embedders.](https://arxiv.org/abs/2310.08232) Xin Zhang et.al. arXiv 2023. (**across tasks, natural and programming languages**)
+- [Language Models are Universal Embedders.](https://arxiv.org/abs/2310.08232) Xin Zhang et.al. arXiv 2023. (**Udever,across tasks, natural and programming languages**)
+- [Fine-Tuning LLaMA for Multi-Stage Text Retrieval.](https://arxiv.org/pdf/2310.08319.pdf) Xueguang Ma et.al. arXiv 2023. (**RepLLaMA, RankLLaMA**, fine-tune LLaMA-2 with bi-encoder architecture)
+- [Making Large Language Models A Better Foundation For Dense Retrieval](https://arxiv.org/abs/2312.15503) Chaofan Li et.al. arXiv 2023. (**pre-train llama + RepLLaMA**)
+- [Improving Text Embeddings with Large Language Models](https://arxiv.org/pdf/2401.00368.pdf). Liang Wang et.al. arXiv 2024. (**E5mistral-7b**, use gpt-4 to build multi-task multi-language synthetic data ($<q, d^+, d^->$) to fine-tune  Mistral-7b)
+- [Sgpt: Gpt sentence embeddings for semantic search](https://arxiv.org/abs/2202.08904). Muennighoff. arXiv 2022. (**SGPT**)
+- [Scaling Sentence Embeddings with Large Language Models](https://arxiv.org/pdf/2307.16645.pdf) Jiang et.al. arXiv 2023. (**PromptEOL**,  instruct the model to summarize the input in a single word and then take the last token embedding + In-context Learning Example(**zero-shot**) / QLora with Contrastive Learning Objective(**Fine-tuning**))
+- [One Embedder, Any Task: Instruction-Finetuned Text Embeddings](https://arxiv.org/pdf/2212.09741.pdf) Su et.al. arXiv 2023. (**INSTRUCTOR**)
+- [GRIT：Generative Representational Instruction Tuning](https://arxiv.org/abs/2402.09906) Muennighoff et. al. arXiv 2024. (GRIT unifies representational instruction tuning and generative instruction tuning)
+- [Repetition Improves Language Model Embeddings](https://arxiv.org/pdf/2402.15449.pdf) Springer et. al. arXiv 2024. (**echo embeddings**, repeat the input twice in context and extract embeddings from the second occurrence)
 
 
 
@@ -122,6 +131,7 @@
 
 - [Generate rather than retrieve: Large language models are strong context generators.](https://arxiv.org/pdf/2209.10063) *Wenhao Yu et.al.* ICLR 2023. (**Retrieve-then-Read->Generate-then-Read pipeline**)
 - [Large Language Models are Built-in Autoregressive Search Engines](https://aclanthology.org/2023.findings-acl.167.pdf), *Ziems et al.*, ACL 2023 (Findings). (**LLM-URL, Given query, llm directly generate Web URLs, open domain QA**)
+
 
 
 
@@ -152,7 +162,7 @@
 
 - [Discrete Prompt Optimization via Constrained Generation for Zero-shot Re-ranker](https://aclanthology.org/2023.findings-acl.61.pdf), *Cho et al.*, ACL 2023 (Findings).
 
-- [Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent.](https://arxiv.org/pdf/2304.09542) *Weiwei Sun et.al.* Arxiv 2023. (**RankGPT, list-wise, sliding window**)
+- [Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agent.](https://aclanthology.org/2023.emnlp-main.923.pdf) *Weiwei Sun et.al.* Arxiv 2023. (**RankGPT, list-wise, sliding window**)
 
 - [Zero-Shot Listwise Document Reranking with a Large Language Model.](https://arxiv.org/pdf/2305.02156) *Xueguang Ma et.al.* Arxiv 2023. (**LRL, list-wise, sliding window**)
 
@@ -160,6 +170,8 @@
   
 - [Beyond Yes and No: Improving Zero-Shot LLM Rankers via Scoring Fine-Grained Relevance Labels.](https://arxiv.org/pdf/2310.14122.pdf) Honglei Zhuang et.al. arXiv 2023. 
   
+- [GAR-meets-RAG paradigm for zero-shot information retrieval.](https://arxiv.org/pdf/2310.20158.pdf) Daman Arora et.al. Microsoft. arXiv 2023. (**RRR: Rewrite-Retrieve-Rerank**,  use RAG model to provide the context for the GAR model, use GAR model as the retriever model for the RAG model.)
+
 
 #### Query Rewriter
 
@@ -176,6 +188,7 @@
 ##### Query Rewriting
 
 - [Large Language Model based Long-tail Query Rewriting in Taobao Search.](https://arxiv.org/pdf/2311.03758.pdf) *Wenjun Peng et.al.* Arxiv 2023.
+- [IterCQR: Iterative Conversational Query Reformulation without Human Supervision.](https://arxiv.org/pdf/2311.09820.pdf) *Yunah Jang et. al.* Arxiv 2023. (**reformulating conversational queries into stand-alone questions**, which enables the utility of off-the-shelf retrievers)
 
 
 

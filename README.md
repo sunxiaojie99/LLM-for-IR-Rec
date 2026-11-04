@@ -64,6 +64,8 @@
 - [Distilling Knowledge from Reader to Retriever for Question Answering.](https://openreview.net/forum?id=NTEz-6wysdb) Gautier Izacard et.al. ICLR 2021 (**FiD-KD**)
 - [Copy Is All You Need.](https://arxiv.org/abs/2307.06962) *Tian Lan et.al.* ICLR 2023. (**COG**)
 - [Active Retrieval Augmented Generation.](https://arxiv.org/abs/2305.06983)  Zhengbao Jiang et.al. Arxiv 2023. (**FLARE**)
+- [ParamMute: Suppressing Knowledge-Critical FFNs for Faithful Retrieval-Augmented Generation.](https://arxiv.org/abs/2502.15543) *Pengcheng Huang et.al.* NeurIPS 2025. (**ParamMute**, suppresses unfaithfulness-associated FFNs so the LLM relies on retrieved context)
+- [SPARK: Adaptive Parametric Knowledge Participation for Faithful Retrieval-Augmented Generation.](https://arxiv.org/abs/2606.27786) *Ruochang Li et.al.* Arxiv 2026. (**SPARK**, a lightweight policy that scales FFN contributions on a frozen LLM)
 
 
 
@@ -184,6 +186,7 @@
 - [Generative relevance feedback with large language models.](https://arxiv.org/pdf/2304.13157) *Iain Mackie et.al.* Arxiv 2023.
 - [Query2doc: Query expansion with large language models.](https://arxiv.org/pdf/2303.07678) *Liang Wang et.al.* Arxiv 2023.
 - [Generate, Filter, and Fuse: Query Expansion via Multi-Step Keyword Generation for Zero-Shot Neural Rankers.](https://arxiv.org/pdf/2311.09175.pdf) Minghan Li et.al. arXiv 2023. (**GFF, a query expansion pipeline to imporve zero-shot ranker**)
+- [ExpandR: Teaching Dense Retrievers Beyond Queries with LLM Guidance.](https://aclanthology.org/2025.emnlp-main.963/) *Sijia Yao et.al.* EMNLP 2025. (**ExpandR, jointly optimizes the LLM query expander with DPO and the dense retriever**)
 
 ##### Query Rewriting
 
